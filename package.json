@@ -1,56 +1,23 @@
 {
-  "name": "my-ts-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@mui/material": "^5.10.2",
-    "@mui/system": "^5.10.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.54",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "babel-plugin-runtime-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "svg": "svgr -d src/icons --replace-attr-values '#343C49=currentColor, #343c49=currentColor' --ignore-existing src/dist",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "make:general": "npx @svgr/cli --typescript --template src/templates --out-dir src/dist -- src/icons"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/types": "^7.18.13",
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
     "@svgr/cli": "^6.3.1",
-    "@svgr/core": "^6.3.1",
-    "@svgr/plugin-prettier": "^6.3.1",
-    "@svgr/plugin-svgo": "^6.3.1",
-    "glob": "^8.0.3"
+    "@types/node": "^18.7.14"
+  },
+  "dependencies": {
+    "@svgr/babel-plugin-remove-jsx-attribute": "^6.3.1",
+    "@svgr/plugin-jsx": "^6.3.1"
   }
 }
