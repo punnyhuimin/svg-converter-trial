@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "make:general": "npx @svgr/cli --config-file .svgrrc.js --typescript --template src/templates --out-dir src/dist -- src/icons"
+    "make:general": "npx @svgr/cli --typescript --template src/templates --out-dir src/dist -- src/icons"
   },
   "keywords": [],
   "author": "",
