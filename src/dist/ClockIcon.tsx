@@ -4,17 +4,11 @@ import { SvgIcon, SvgIconProps } from "@mui/material";
 import { memo } from "react";
 
 const SvgClockIcon = (props: SvgIconProps) => {
-  const { sx, ...other } = props;
-  return (
-    <SvgIcon
-      xmlns="http://www.w3.org/2000/svg"
-      width={30}
-      height={30}
-      {...other}
-    >
-      <path d="M15 3C8.373 3 3 8.373 3 15s5.373 12 12 12 12-5.373 12-12S21.627 3 15 3zm1 13H7.995A.994.994 0 0 1 7 15.005v-.011c0-.549.445-.994.995-.994H14V5.995c0-.55.445-.995.995-.995h.011c.549 0 .994.445.994.995V16z" />
-    </SvgIcon>
-  );
+  const {
+    sx,
+    ...other
+  } = props;
+  return <SvgIcon fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px" {...other}><path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,16H7.995 C7.445,16,7,15.555,7,15.005v-0.011C7,14.445,7.445,14,7.995,14H14V5.995C14,5.445,14.445,5,14.995,5h0.011 C15.555,5,16,5.445,16,5.995V16z" /></SvgIcon>;
 };
 
 export default SvgClockIcon;
