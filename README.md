@@ -15,3 +15,4 @@ To create your own GC3 Icons, you will need to convert the SVG icons into compon
 2. Reconfigure the output tsx file, making sure that the files are always generated into an output file that is used to create the various components
 3. Add in a metatag JSON file such that the search bar will be working alongside with it and the component file
 4. Configure prettier and eslint
+5. Add in testing for the icons display
