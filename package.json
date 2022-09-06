@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "make:general": "npx @svgr/cli --typescript --template src/templates --out-dir src/dist -- src/icons"
+    "make:general": "npx @svgr/cli --typescript --template src/templates --out-dir src/icons -- src/svg-icons",
+    "make:no-duplicates": "npx @svgr/cli --typescript --ignore-existing --template src/templates --out-dir src/icons -- src/svg-icons"
   },
   "keywords": [],
   "author": "",
