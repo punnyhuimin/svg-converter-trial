@@ -4,7 +4,7 @@ import './App.css';
 import SvgClockIcon from './icons/ClockIcon';
 import SvgApple from './icons/Apple';
 // import { Button } from '@mui/material';
-import ButtonContainer from './buttonContainer';
+// import ButtonContainer from './buttonContainer';
 import { useTheme } from '@mui/material/styles';
 // import * as htmlToImage from 'html-to-image';
 // import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
@@ -16,9 +16,19 @@ function App() {
   const theme = useTheme();
 
   function exportAsImage() {
-    htmlToImage.toPng(document.getElementById('big-clock') as HTMLElement)
+    const requiredEle = document.getElementById('big-clock') as HTMLElement;
+    const clonedEle = requiredEle.cloneNode(true) as HTMLElement;
+    // Have to appendChild if not the dataUrl cannot be rendered
+    document.body.appendChild(clonedEle);
+    clonedEle.style.width = "500px";
+    clonedEle.style.height = "500px";
+    // htmlToImage.toPng(document.getElementById('big-clock') as HTMLElement)
+    htmlToImage.toPng(clonedEle)
     .then(function (dataUrl: string) {
+      console.log(dataUrl)
       download(dataUrl, 'my-big-clock.png');
+      // Have to removeChild to remove it from the page after the rendered image is downloaded
+      document.body.removeChild(clonedEle);
     });
   }
   
